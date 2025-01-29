@@ -1,9 +1,9 @@
 import json
+from pathlib import Path
 
 import pytest
 from playwright.sync_api import sync_playwright
 
-from pages import upload_page
 from pages.upload_page import UploadPage
 
 
@@ -14,16 +14,10 @@ def test_response_format_and_values():
         page = browser.new_page()
         upload_page = UploadPage(page)
 
-        # Navigate to the upload page
-        upload_page.navigate("http://localhost:8000")
+        # Upload a valid file and click on upload
+        response = upload_page.upload_file("valid_products.csv")
 
-        # Upload a valid file
-        upload_page.upload_file(r"C:\Automation\Shopic\data\valid_products.csv")
-        upload_page.click_upload()
-
-        # Wait for the response and parse it as JSON
-        page.wait_for_selector(upload_page.message_selector)
-        response = page.text_content(upload_page.message_selector)
+        # parse it as JSON
         parsed_response = json.loads(response)
 
         # Validate the top-level keys
@@ -65,12 +59,7 @@ def test_invalid_upload():
             upload_page.navigate("http://localhost:8000")
 
             # Upload an invalid file
-            upload_page.upload_file(r"C:\Automation\Shopic\data\invalid_products.csv")
-            upload_page.click_upload()
-
-            # Wait for the error message
-            page.wait_for_selector(upload_page.message_selector, timeout=5000)
-            results = page.text_content(upload_page.message_selector)
+            results = upload_page.upload_file("invalid_products.csv")
 
             # Assert that the response contains 'error'
             assert "error" in results.lower(), f"Expected 'error' in results, but got: {results}"
@@ -91,12 +80,7 @@ def test_nameless_upload():
             upload_page.navigate("http://localhost:8000")
 
             # Upload a file with missing names
-            upload_page.upload_file(r"C:\Automation\Shopic\data\nameless_products.csv")
-            upload_page.click_upload()
-
-            # Wait for the error message
-            page.wait_for_selector(upload_page.message_selector, timeout=5000)
-            results = page.text_content(upload_page.message_selector)
+            results = upload_page.upload_file("nameless_products.csv")
 
             # Assert that the error message contains the expected text
             expected_error = "Missing name in row"
@@ -118,12 +102,7 @@ def test_empty_file_upload():
             upload_page.navigate("http://localhost:8000")
 
             # Upload an empty file
-            upload_page.upload_file(r"C:\Automation\Shopic\data\empty.csv")
-            upload_page.click_upload()
-
-            # Wait for the error message
-            page.wait_for_selector(upload_page.message_selector, timeout=5000)
-            results = page.text_content(upload_page.message_selector)
+            results = upload_page.upload_file("empty.csv")
 
             # Assert that the error message contains the expected text
             expected_error = "No columns to parse from file"
@@ -164,8 +143,8 @@ def test_no_file_selected():
             # Click the upload button without selecting a file
             upload_page.click_upload()
 
-            # Wait briefly to ensure the dialog has time to appear
-            page.wait_for_timeout(1000)
+            # # Wait briefly to ensure the dialog has time to appear
+            # page.wait_for_timeout(1000)
 
             if dialog_message:
                 # If a dialog appears, verify its message

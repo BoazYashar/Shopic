@@ -1,4 +1,9 @@
+from pathlib import Path
+
 from pages.base_page import BasePage
+
+PROJECT_DIR = Path(__file__).parent
+CSV_FILE_PATH = PROJECT_DIR / "data"
 
 
 class UploadPage(BasePage):
@@ -10,9 +15,16 @@ class UploadPage(BasePage):
         self.message_selector = '#results'
         self.error_message_selector = 'input[type="file"]'
 
-    def upload_file(self, file_path: str):
+    def upload_file(self, file_name: str) -> str:
         """Upload a file."""
+        self.navigate("http://localhost:8000")
+        file_path = str(CSV_FILE_PATH / file_name)
         self.page.set_input_files(self.file_input_selector, file_path)
+        self.page.click(self.upload_button_selector)
+        # Wait for the error message
+        self.page.wait_for_selector(self.message_selector)
+        results = self.page.text_content(self.message_selector)
+        return results
 
     def click_upload(self):
         """Click the upload button."""

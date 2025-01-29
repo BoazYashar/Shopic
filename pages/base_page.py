@@ -14,7 +14,6 @@ class BasePage:
         """Retrieve text content from an element based on the provided selector."""
         return self.page.text_content(selector)
 
-
     def click(self, selector: str):
         """Click on an element specified by the selector."""
         self.page.click(selector)
