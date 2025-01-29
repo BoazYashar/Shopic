@@ -4,19 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3b965b4a-58ae-44bc-a953-2b3100827ef4" name="Changes" comment=" Automated tests using Playwright with Python for Shopic">
-      <change afterPath="$PROJECT_DIR$/data/empty.csv" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/data/expected_results.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/data/invalid_products.csv" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/data/nameless_products.csv" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/data/valid_products.csv" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/reports/assets/style.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/~$ReadMe.docx" afterDir="false" />
+    <list default="true" id="3b965b4a-58ae-44bc-a953-2b3100827ef4" name="Changes" comment="Refactor upload_file to reduce redundancy">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/base_page.py" beforeDir="false" afterPath="$PROJECT_DIR$/pages/base_page.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pages/upload_page.py" beforeDir="false" afterPath="$PROJECT_DIR$/pages/upload_page.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/reports/test_report.html" beforeDir="false" afterPath="$PROJECT_DIR$/reports/test_report.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/test_upload.py" beforeDir="false" afterPath="$PROJECT_DIR$/tests/test_upload.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -32,6 +22,7 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="UPDATE_TYPE" value="REBASE" />
   </component>
   <component name="ProblemsViewState">
     <option name="selectedTabId" value="CurrentFile" />
@@ -47,21 +38,21 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
-    &quot;Python tests.Python tests for test_upload.test_empty_file_upload.executor&quot;: &quot;Run&quot;,
-    &quot;Python tests.Python tests for test_upload.test_invalid_upload.executor&quot;: &quot;Run&quot;,
-    &quot;Python tests.Python tests for test_upload.test_nameless_upload.executor&quot;: &quot;Run&quot;,
-    &quot;Python tests.Python tests for test_upload.test_no_file_selected.executor&quot;: &quot;Run&quot;,
-    &quot;Python tests.Python tests for test_upload.test_response_format_and_values.executor&quot;: &quot;Run&quot;,
-    &quot;Python tests.Python tests for test_upload.test_valid_upload.executor&quot;: &quot;Run&quot;,
-    &quot;Python tests.Python tests in homePage.py.executor&quot;: &quot;Run&quot;,
-    &quot;Python.homePage.executor&quot;: &quot;Run&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Automation/ShopicPractice&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ASKED_ADD_EXTERNAL_FILES": "true",
+    "Python tests.Python tests for test_upload.test_empty_file_upload.executor": "Run",
+    "Python tests.Python tests for test_upload.test_invalid_upload.executor": "Run",
+    "Python tests.Python tests for test_upload.test_nameless_upload.executor": "Run",
+    "Python tests.Python tests for test_upload.test_no_file_selected.executor": "Run",
+    "Python tests.Python tests for test_upload.test_response_format_and_values.executor": "Debug",
+    "Python tests.Python tests for test_upload.test_valid_upload.executor": "Run",
+    "Python tests.Python tests in homePage.py.executor": "Run",
+    "Python.homePage.executor": "Run",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "last_opened_file_path": "C:/Automation/ShopicPractice"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Automation\Shopic\Shopic\pages" />
@@ -198,12 +189,59 @@
     <option name="localTasksCounter" value="4" />
     <servers />
   </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="RECENT_FILTERS">
+      <map>
+        <entry key="Branch">
+          <value>
+            <list>
+              <RecentGroup>
+                <option name="FILTER_VALUES">
+                  <option value="master" />
+                </option>
+              </RecentGroup>
+            </list>
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="FILTERS">
+                <map>
+                  <entry key="branch">
+                    <value>
+                      <list>
+                        <option value="master" />
+                      </list>
+                    </value>
+                  </entry>
+                </map>
+              </option>
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <MESSAGE value=" Automated tests using Playwright with Python for Shopic" />
     <option name="LAST_COMMIT_MESSAGE" value=" Automated tests using Playwright with Python for Shopic" />
   </component>
   <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/pages/upload_page.py</url>
+          <line>23</line>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
     <watches-manager>
       <configuration name="tests">
         <watch expression="self.page" language="Python" />

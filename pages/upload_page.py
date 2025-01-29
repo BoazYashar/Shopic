@@ -20,6 +20,7 @@ class UploadPage(BasePage):
         self.navigate("http://localhost:8000")
         file_path = str(CSV_FILE_PATH / file_name)
         self.page.set_input_files(self.file_input_selector, file_path)
+        self.page.wait_for_selector(self.upload_button_selector)
         self.page.click(self.upload_button_selector)
         # Wait for the error message
         self.page.wait_for_selector(self.message_selector)
