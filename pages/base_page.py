@@ -1,20 +1,19 @@
-
-from playwright.sync_api import Page
+import pytest
+from playwright.sync_api import Page, sync_playwright
+from pathlib import Path
+import json
+from typing import Generator
 
 
 class BasePage:
     def __init__(self, page: Page):
-        """Initialize the BasePage with a Playwright Page object."""
         self.page = page
 
     def navigate(self, url: str):
-        """Navigate to a specific URL."""
-        self.page.goto(url)
+        self.page.goto(url, timeout=60000)
 
     def get_text(self, selector: str) -> str:
-        """Retrieve text content from an element based on the provided selector."""
         return self.page.text_content(selector)
 
     def click(self, selector: str):
-        """Click on an element specified by the selector."""
         self.page.click(selector)

@@ -4,9 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3b965b4a-58ae-44bc-a953-2b3100827ef4" name="Changes" comment="Refactor upload_file to reduce redundancy">
-      <change afterPath="$PROJECT_DIR$/conftest.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tests/error-screenshot.png" afterDir="false" />
+    <list default="true" id="3b965b4a-58ae-44bc-a953-2b3100827ef4" name="Changes" comment="HTTP1\2">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pages/base_page.py" beforeDir="false" afterPath="$PROJECT_DIR$/pages/base_page.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pages/upload_page.py" beforeDir="false" afterPath="$PROJECT_DIR$/pages/upload_page.py" afterDir="false" />
@@ -25,9 +23,36 @@
     </option>
   </component>
   <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="fork" />
+      </map>
+    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
     <option name="UPDATE_TYPE" value="REBASE" />
   </component>
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;BoazYashar&quot;
+  }
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/BoazYashar/Shopic&quot;,
+    &quot;accountId&quot;: &quot;b2410126-f0f9-4ff7-ac82-b492a3f35ef0&quot;
+  },
+  &quot;recentNewPullRequestHead&quot;: {
+    &quot;server&quot;: {
+      &quot;useHttp&quot;: false,
+      &quot;host&quot;: &quot;github.com&quot;,
+      &quot;port&quot;: null,
+      &quot;suffix&quot;: null
+    },
+    &quot;owner&quot;: &quot;BoazYashar&quot;,
+    &quot;repository&quot;: &quot;Shopic&quot;
+  }
+}</component>
   <component name="ProblemsViewState">
     <option name="selectedTabId" value="CurrentFile" />
   </component>
@@ -46,11 +71,12 @@
   "keyToString": {
     "ASKED_ADD_EXTERNAL_FILES": "true",
     "Python tests.Python tests for test_upload.test_empty_file_upload.executor": "Run",
-    "Python tests.Python tests for test_upload.test_file_upload_http2.executor": "Run",
+    "Python tests.Python tests for test_upload.test_file_upload.executor": "Run",
+    "Python tests.Python tests for test_upload.test_file_upload_http2.executor": "Debug",
     "Python tests.Python tests for test_upload.test_invalid_upload.executor": "Run",
     "Python tests.Python tests for test_upload.test_nameless_upload.executor": "Run",
     "Python tests.Python tests for test_upload.test_no_file_selected.executor": "Run",
-    "Python tests.Python tests for test_upload.test_response_format_and_values.executor": "Run",
+    "Python tests.Python tests for test_upload.test_response_format_and_values.executor": "Debug",
     "Python tests.Python tests for test_upload.test_valid_upload.executor": "Run",
     "Python tests.Python tests in homePage.py.executor": "Run",
     "Python.homePage.executor": "Run",
@@ -66,7 +92,7 @@
       <recent name="C:\Automation\Shopic\Shopic" />
     </key>
   </component>
-  <component name="RunManager" selected="Python tests.Python tests for test_upload.test_file_upload_http2">
+  <component name="RunManager" selected="Python tests.Python tests for test_upload.test_response_format_and_values">
     <configuration name="Python tests for test_upload.test_empty_file_upload" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
       <module name="Shopic" />
       <option name="ENV_FILES" value="" />
@@ -79,6 +105,21 @@
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <option name="_new_additionalArguments" value="&quot;&quot;" />
       <option name="_new_target" value="&quot;test_upload.test_empty_file_upload&quot;" />
+      <option name="_new_targetType" value="&quot;PYTHON&quot;" />
+      <method v="2" />
+    </configuration>
+    <configuration name="Python tests for test_upload.test_file_upload" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
+      <module name="Shopic" />
+      <option name="ENV_FILES" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/tests" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="_new_additionalArguments" value="&quot;&quot;" />
+      <option name="_new_target" value="&quot;test_upload.test_file_upload&quot;" />
       <option name="_new_targetType" value="&quot;PYTHON&quot;" />
       <method v="2" />
     </configuration>
@@ -97,7 +138,7 @@
       <option name="_new_targetType" value="&quot;PYTHON&quot;" />
       <method v="2" />
     </configuration>
-    <configuration name="Python tests for test_upload.test_no_file_selected" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
+    <configuration name="Python tests for test_upload.test_invalid_upload" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
       <module name="Shopic" />
       <option name="ENV_FILES" value="" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -108,7 +149,7 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <option name="_new_additionalArguments" value="&quot;&quot;" />
-      <option name="_new_target" value="&quot;test_upload.test_no_file_selected&quot;" />
+      <option name="_new_target" value="&quot;test_upload.test_invalid_upload&quot;" />
       <option name="_new_targetType" value="&quot;PYTHON&quot;" />
       <method v="2" />
     </configuration>
@@ -127,28 +168,13 @@
       <option name="_new_targetType" value="&quot;PYTHON&quot;" />
       <method v="2" />
     </configuration>
-    <configuration name="Python tests for test_upload.test_valid_upload" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
-      <module name="Shopic" />
-      <option name="ENV_FILES" value="" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/tests" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="_new_additionalArguments" value="&quot;&quot;" />
-      <option name="_new_target" value="&quot;test_upload.test_valid_upload&quot;" />
-      <option name="_new_targetType" value="&quot;PYTHON&quot;" />
-      <method v="2" />
-    </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Python tests.Python tests for test_upload.test_file_upload_http2" />
         <item itemvalue="Python tests.Python tests for test_upload.test_response_format_and_values" />
-        <item itemvalue="Python tests.Python tests for test_upload.test_valid_upload" />
+        <item itemvalue="Python tests.Python tests for test_upload.test_file_upload_http2" />
+        <item itemvalue="Python tests.Python tests for test_upload.test_file_upload" />
+        <item itemvalue="Python tests.Python tests for test_upload.test_invalid_upload" />
         <item itemvalue="Python tests.Python tests for test_upload.test_empty_file_upload" />
-        <item itemvalue="Python tests.Python tests for test_upload.test_no_file_selected" />
       </list>
     </recent_temporary>
   </component>
@@ -208,7 +234,23 @@
       <option name="project" value="LOCAL" />
       <updated>1738155882185</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="HTTP1\2">
+      <option name="closed" value="true" />
+      <created>1739524407242</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1739524407242</updated>
+    </task>
+    <task id="LOCAL-00007" summary="HTTP1\2">
+      <option name="closed" value="true" />
+      <created>1739524480433</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1739524480433</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -253,15 +295,21 @@
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <MESSAGE value=" Automated tests using Playwright with Python for Shopic" />
     <MESSAGE value="Refactor upload_file to reduce redundancy" />
-    <option name="LAST_COMMIT_MESSAGE" value="Refactor upload_file to reduce redundancy" />
+    <MESSAGE value="HTTP1\2" />
+    <option name="LAST_COMMIT_MESSAGE" value="HTTP1\2" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/pages/upload_page.py</url>
-          <line>31</line>
-          <option name="timeStamp" value="7" />
+          <url>file://$PROJECT_DIR$/tests/test_upload.py</url>
+          <line>48</line>
+          <option name="timeStamp" value="11" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/tests/test_upload.py</url>
+          <line>27</line>
+          <option name="timeStamp" value="13" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
