@@ -5,8 +5,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="3b965b4a-58ae-44bc-a953-2b3100827ef4" name="Changes" comment="Refactor upload_file to reduce redundancy">
+      <change afterPath="$PROJECT_DIR$/conftest.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tests/error-screenshot.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/base_page.py" beforeDir="false" afterPath="$PROJECT_DIR$/pages/base_page.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pages/upload_page.py" beforeDir="false" afterPath="$PROJECT_DIR$/pages/upload_page.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/test_upload.py" beforeDir="false" afterPath="$PROJECT_DIR$/tests/test_upload.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -42,15 +46,17 @@
   "keyToString": {
     "ASKED_ADD_EXTERNAL_FILES": "true",
     "Python tests.Python tests for test_upload.test_empty_file_upload.executor": "Run",
+    "Python tests.Python tests for test_upload.test_file_upload_http2.executor": "Run",
     "Python tests.Python tests for test_upload.test_invalid_upload.executor": "Run",
     "Python tests.Python tests for test_upload.test_nameless_upload.executor": "Run",
     "Python tests.Python tests for test_upload.test_no_file_selected.executor": "Run",
-    "Python tests.Python tests for test_upload.test_response_format_and_values.executor": "Debug",
+    "Python tests.Python tests for test_upload.test_response_format_and_values.executor": "Run",
     "Python tests.Python tests for test_upload.test_valid_upload.executor": "Run",
     "Python tests.Python tests in homePage.py.executor": "Run",
     "Python.homePage.executor": "Run",
     "RunOnceActivity.ShowReadmeOnStart": "true",
-    "last_opened_file_path": "C:/Automation/ShopicPractice"
+    "last_opened_file_path": "C:/Automation/ShopicPractice",
+    "settings.editor.selected.configurable": "ml.llm.LLMConfigurable"
   }
 }]]></component>
   <component name="RecentsManager">
@@ -60,7 +66,7 @@
       <recent name="C:\Automation\Shopic\Shopic" />
     </key>
   </component>
-  <component name="RunManager" selected="Python tests.Python tests for test_upload.test_response_format_and_values">
+  <component name="RunManager" selected="Python tests.Python tests for test_upload.test_file_upload_http2">
     <configuration name="Python tests for test_upload.test_empty_file_upload" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
       <module name="Shopic" />
       <option name="ENV_FILES" value="" />
@@ -76,7 +82,7 @@
       <option name="_new_targetType" value="&quot;PYTHON&quot;" />
       <method v="2" />
     </configuration>
-    <configuration name="Python tests for test_upload.test_invalid_upload" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
+    <configuration name="Python tests for test_upload.test_file_upload_http2" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
       <module name="Shopic" />
       <option name="ENV_FILES" value="" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -87,22 +93,7 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <option name="_new_additionalArguments" value="&quot;&quot;" />
-      <option name="_new_target" value="&quot;test_upload.test_invalid_upload&quot;" />
-      <option name="_new_targetType" value="&quot;PYTHON&quot;" />
-      <method v="2" />
-    </configuration>
-    <configuration name="Python tests for test_upload.test_nameless_upload" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
-      <module name="Shopic" />
-      <option name="ENV_FILES" value="" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/tests" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="_new_additionalArguments" value="&quot;&quot;" />
-      <option name="_new_target" value="&quot;test_upload.test_nameless_upload&quot;" />
+      <option name="_new_target" value="&quot;test_upload.test_file_upload_http2&quot;" />
       <option name="_new_targetType" value="&quot;PYTHON&quot;" />
       <method v="2" />
     </configuration>
@@ -136,13 +127,28 @@
       <option name="_new_targetType" value="&quot;PYTHON&quot;" />
       <method v="2" />
     </configuration>
+    <configuration name="Python tests for test_upload.test_valid_upload" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
+      <module name="Shopic" />
+      <option name="ENV_FILES" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/tests" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="_new_additionalArguments" value="&quot;&quot;" />
+      <option name="_new_target" value="&quot;test_upload.test_valid_upload&quot;" />
+      <option name="_new_targetType" value="&quot;PYTHON&quot;" />
+      <method v="2" />
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Python tests.Python tests for test_upload.test_file_upload_http2" />
         <item itemvalue="Python tests.Python tests for test_upload.test_response_format_and_values" />
-        <item itemvalue="Python tests.Python tests for test_upload.test_no_file_selected" />
+        <item itemvalue="Python tests.Python tests for test_upload.test_valid_upload" />
         <item itemvalue="Python tests.Python tests for test_upload.test_empty_file_upload" />
-        <item itemvalue="Python tests.Python tests for test_upload.test_nameless_upload" />
-        <item itemvalue="Python tests.Python tests for test_upload.test_invalid_upload" />
+        <item itemvalue="Python tests.Python tests for test_upload.test_no_file_selected" />
       </list>
     </recent_temporary>
   </component>
@@ -186,7 +192,23 @@
       <option name="project" value="LOCAL" />
       <updated>1738047648525</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Refactor upload_file to reduce redundancy">
+      <option name="closed" value="true" />
+      <created>1738155835431</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1738155835431</updated>
+    </task>
+    <task id="LOCAL-00005" summary="Refactor upload_file to reduce redundancy">
+      <option name="closed" value="true" />
+      <created>1738155882185</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1738155882185</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -230,23 +252,18 @@
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <MESSAGE value=" Automated tests using Playwright with Python for Shopic" />
-    <option name="LAST_COMMIT_MESSAGE" value=" Automated tests using Playwright with Python for Shopic" />
+    <MESSAGE value="Refactor upload_file to reduce redundancy" />
+    <option name="LAST_COMMIT_MESSAGE" value="Refactor upload_file to reduce redundancy" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/pages/upload_page.py</url>
-          <line>23</line>
-          <option name="timeStamp" value="1" />
+          <line>31</line>
+          <option name="timeStamp" value="7" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
-    <watches-manager>
-      <configuration name="tests">
-        <watch expression="self.page" language="Python" />
-        <watch expression="self.file_input_selector" language="Python" />
-      </configuration>
-    </watches-manager>
   </component>
 </project>
